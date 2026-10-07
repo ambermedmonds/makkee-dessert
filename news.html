@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta name="theme-color" content="#e9e3d2" />
+		<meta name="description" content="News, seasonal updates, and press coverage of Makkee Dessert 麦记牛奶 in Downtown Bellevue." />
+		<title>News | Makkee Dessert 麦记牛奶</title>
+		<link rel="stylesheet" href="styles.css" />
+	</head>
+	<body>
+		<header class="site-header">
+			<a class="wordmark" href="index.html" aria-label="Makkee Dessert home">
+				<span class="wordmark-main"><span class="brand-cn">麦记</span><span class="brand-latin">MAKKEE</span></span>
+				<span class="wordmark-main"><span class="brand-cn">牛奶</span><span class="brand-latin">DESSERT</span></span>
+			</a>
+			<nav class="main-nav" aria-label="Main navigation">
+				<a href="index.html">Home</a>
+				<a href="about.html">About us</a>
+				<a href="menu.html">Menu</a>
+				<a href="news.html" aria-current="page">News</a>
+			</nav>
+
+			<details class="mobile-menu">
+				<summary aria-label="Open navigation"><span class="sr-only">Open navigation</span></summary>
+				<nav class="mobile-nav-panel" aria-label="Mobile navigation">
+					<a href="index.html">Home</a>
+					<a href="about.html">About us</a>
+					<a href="menu.html">Menu</a>
+					<a href="news.html" aria-current="page">News</a>
+				</nav>
+			</details>
+		</header>
+
+		<main>
+			<section class="page-hero section-pad">
+				<h1>News &amp; Updates.</h1>
+				<p class="page-lede">What's new, what's in season, and what people are saying about Makkee.</p>
+			</section>
+
+			<!-- Update and Seasonal posts are drafted from known facts. Confirm with the client before launch. -->
+			<section class="news-list section-pad">
+				<div class="news-filters" role="group" aria-label="Filter posts">
+					<button type="button" class="news-filter" data-filter="all" aria-pressed="true">All</button>
+					<button type="button" class="news-filter" data-filter="update" aria-pressed="false">Updates</button>
+					<button type="button" class="news-filter" data-filter="press" aria-pressed="false">Press</button>
+					<button type="button" class="news-filter" data-filter="seasonal" aria-pressed="false">Seasonal</button>
+				</div>
+				<article class="news-post" data-kind="seasonal">
+					<img class="news-post-photo" src="images/menu/watermelon-coconut.jpg" alt="Watermelon Coconut in a white bowl" loading="lazy" />
+					<div class="news-post-body">
+						<div class="news-meta"><span class="news-tag news-tag-seasonal">Seasonal</span><span class="news-date">Now on the menu</span></div>
+						<h2>Watermelon Coconut is here for the season</h2>
+						<p>Freshly cut watermelon in rich coconut milk, with chewy taro balls, mini rice balls, red beans, cooling jelly, and crispy coconut chips. Served cold only.</p>
+						<a class="under-link" href="menu.html#menu-seasonal">See the seasonal menu <span aria-hidden="true">→</span></a>
+					</div>
+				</article>
+				<article class="news-post" data-kind="press">
+					<img class="news-post-photo" src="images/news-open-sign.jpg" alt="An OPEN sign hanging in a shop window" loading="lazy" />
+					<div class="news-post-body">
+						<div class="news-meta"><span class="news-tag news-tag-press">Press</span><span class="news-date">Sept. 8, 2026 · 425 Magazine</span></div>
+						<h2>Makkee Dessert Bringing Its Sweet Treats to Downtown Bellevue</h2>
+						<p>A look at Makkee’s first Washington location on Main Street, and the dessert soups behind a brand with about 1,000 shops in China.</p>
+						<a class="under-link" href="https://www.425magazine.com/eat-drink/makkee-dessert-downtown-bellevue/article_02d02d8b-6b12-4a08-9497-76fd3406f443.html" target="_blank" rel="noreferrer">Read article ↗</a>
+					</div>
+				</article>
+				<article class="news-post" data-kind="press">
+					<img class="news-post-photo" src="images/storefront-bellevue.jpg" alt="The Makkee Dessert storefront on Main Street in Downtown Bellevue, with menu posters in the windows" loading="lazy" />
+					<div class="news-post-body">
+						<div class="news-meta"><span class="news-tag news-tag-press">Press</span><span class="news-date">Sept. 3, 2026 · Downtown Bellevue</span></div>
+						<h2>Chinese Dessert Chain Makkee Opens in Former Sugar n Flakes Space in Downtown Bellevue</h2>
+						<p>Makkee opens on the retail level of Surrey on Main, with signature bowls like the Makkee Deluxe and Mango Pomelo Sago.</p>
+						<a class="under-link" href="https://downtownbellevue.com/2026/09/03/chinese-dessert-chain-makkee-opens-former-sugar-n-flakes-space-downtown-bellevue/" target="_blank" rel="noreferrer">Read article ↗</a>
+					</div>
+				</article>
+				<article class="news-post" data-kind="update">
+					<img class="news-post-photo" src="images/news-now-open.jpg" alt="Fresh milk being poured into a Makkee bowl of cassava, taro, and sago topped with osmanthus" loading="lazy" />
+					<div class="news-post-body">
+						<div class="news-meta"><span class="news-tag news-tag-update">Update</span><span class="news-date">September 2026</span></div>
+						<h2>We’re open in Downtown Bellevue</h2>
+						<p>Makkee Dessert 麦记牛奶 is now serving fresh Asian desserts at 10797 Main St, every day from 12 PM to 9 PM. Come stop by and say hi.</p>
+						<a class="under-link" href="index.html#visit">Find us <span aria-hidden="true">→</span></a>
+					</div>
+				</article>
+			</section>
+			<script>
+				document.querySelectorAll('.news-filter').forEach(function (btn) {
+					btn.addEventListener('click', function () {
+						var f = btn.dataset.filter;
+						document.querySelectorAll('.news-filter').forEach(function (b) { b.setAttribute('aria-pressed', b === btn); });
+						document.querySelectorAll('.news-post').forEach(function (p) { p.hidden = f !== 'all' && p.dataset.kind !== f; });
+					});
+				});
+			</script>
+		</main>
+
+		<footer class="site-footer">
+			<div class="footer-main">
+				<div class="footer-brand">
+					<a class="wordmark footer-wordmark" href="index.html" aria-label="Makkee Dessert home">
+						<span class="wordmark-main"><span class="brand-cn">麦记</span><span class="brand-latin">MAKKEE</span></span>
+						<span class="wordmark-main"><span class="brand-cn">牛奶</span><span class="brand-latin">DESSERT</span></span>
+					</a>
+					<p>Modern Asian desserts.<br />Just the right amount of sweet.</p>
+				</div>
+				<nav class="footer-column" aria-label="Footer navigation">
+					<h2>Explore</h2>
+					<a href="index.html">Home</a>
+					<a href="about.html">About us</a>
+					<a href="menu.html">Menu</a>
+					<a href="news.html">News</a>
+				</nav>
+				<div class="footer-column">
+					<h2>Visit us</h2>
+					<address>10797 Main St<br />Bellevue, WA 98004</address>
+					<p>Open every day<br />12 PM–9 PM</p>
+					<a href="https://www.google.com/maps/dir/?api=1&amp;destination=10797+Main+St,+Bellevue,+WA+98004" target="_blank" rel="noreferrer">Get directions ↗</a>
+				</div>
+				<div class="footer-column">
+					<h2>Follow &amp; order</h2>
+					<a href="https://www.instagram.com/makkeedessert_usa/" target="_blank" rel="noreferrer">Instagram ↗</a>
+					<a href="https://www.fantuanorder.com/en-US/store/makkee-dessert-/us-4805476" target="_blank" rel="noreferrer">Order on Fantuan ↗</a>
+					<a href="https://www.doordash.com/store/makkee-dessert-seattle-%E9%BA%A6%E8%AE%B0%E7%89%9B%E5%A5%B6%E5%85%AC%E5%8F%B8-bellevue-52306765/121913362/" target="_blank" rel="noreferrer">Order on DoorDash ↗</a>
+				</div>
+			</div>
+			<div class="footer-bottom"><span>© 2026 Makkee Dessert 麦记牛奶</span><a href="#top">Back to top ↑</a></div>
+		</footer>
+	</body>
+</html>
