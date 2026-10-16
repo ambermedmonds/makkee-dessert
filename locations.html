@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta name="theme-color" content="#e9e3d2" />
+		<meta name="description" content="Find a Makkee Dessert 麦记牛奶 near you. Shops in Rowland Heights, San Gabriel, Los Angeles, Mountain View, Flushing, and Bellevue, with more on the way." />
+		<title>Locations | Makkee Dessert 麦记牛奶</title>
+		<link rel="stylesheet" href="styles.css" />
+	</head>
+	<body>
+		<header class="site-header">
+			<a class="wordmark" href="index.html" aria-label="Makkee Dessert home">
+				<span class="wordmark-main"><span class="brand-cn">麦记</span><span class="brand-latin">MAKKEE</span></span>
+				<span class="wordmark-main"><span class="brand-cn">牛奶</span><span class="brand-latin">DESSERT</span></span>
+			</a>
+			<nav class="main-nav" aria-label="Main navigation">
+				<a href="index.html">Home</a>
+				<a href="about.html">About us</a>
+				<a href="menu.html">Menu</a>
+				<a href="locations.html" aria-current="page">Locations</a>
+				<a href="news.html">News</a>
+			</nav>
+
+			<details class="mobile-menu">
+				<summary aria-label="Open navigation"><span class="sr-only">Open navigation</span></summary>
+				<nav class="mobile-nav-panel" aria-label="Mobile navigation">
+					<a href="index.html">Home</a>
+					<a href="about.html">About us</a>
+					<a href="menu.html">Menu</a>
+					<a href="locations.html" aria-current="page">Locations</a>
+					<a href="news.html">News</a>
+				</nav>
+			</details>
+		</header>
+
+		<main>
+			<section class="page-hero section-pad">
+				<h1>Find a Makkee <em>Near You.</em></h1>
+				<p class="page-lede"><span data-loc-count>6</span> shops across California, New York, and Washington, with more on the way.</p>
+			</section>
+
+			<section class="locations section-pad" aria-label="Store locator">
+				<div class="loc-toolbar">
+					<div class="news-filters loc-filters" role="group" aria-label="Filter by state">
+						<button type="button" class="news-filter loc-filter" data-state="all" aria-pressed="true">All</button>
+						<button type="button" class="news-filter loc-filter" data-state="CA" aria-pressed="false">California</button>
+						<button type="button" class="news-filter loc-filter" data-state="NY" aria-pressed="false">New York</button>
+						<button type="button" class="news-filter loc-filter" data-state="WA" aria-pressed="false">Washington</button>
+					</div>
+					<button type="button" class="loc-near" id="loc-near"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="4"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3"/></svg>Near me</button>
+				</div>
+				<p class="sr-only" id="loc-status" role="status" aria-live="polite"></p>
+				<div class="loc-layout">
+					<div class="loc-map-wrap">
+						<div class="loc-map" id="loc-map"></div>
+						<div class="loc-map-controls">
+							<button type="button" id="loc-zoom-in" aria-label="Zoom in">+</button>
+							<button type="button" id="loc-zoom-out" aria-label="Zoom out">−</button>
+							<button type="button" id="loc-reset" aria-label="Show the whole country">⤢</button>
+						</div>
+						<div class="loc-legend" aria-hidden="true"><span><i class="loc-key"></i>Open</span><span><i class="loc-key loc-key-soon"></i>Coming soon</span><span><i class="loc-key loc-key-cluster">3</i>Click to zoom</span></div>
+					</div>
+					<ol class="loc-list" id="loc-list" aria-label="Makkee Dessert locations"></ol>
+				</div>
+				<noscript><p class="page-lede">Turn on JavaScript to see the map and the full list of shops, or find the latest on <a href="https://www.instagram.com/makkeedessert_usa/">Instagram</a>.</p></noscript>
+			</section>
+
+			<section class="loc-cta section-pad">
+				<h2>Don't see your city?</h2>
+				<p>New shops are opening across the U.S. Follow us for opening dates and first-week specials.</p>
+				<a class="button button-light" href="https://www.instagram.com/makkeedessert_usa/" target="_blank" rel="noreferrer">Follow @makkeedessert_usa <span aria-hidden="true">↗</span></a>
+			</section>
+
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.9.0/d3.min.js"></script>
+			<script src="https://cdn.jsdelivr.net/npm/topojson-client@3.1.0/dist/topojson-client.min.js"></script>
+			<script src="data/us-states.js"></script>
+			<script src="locations.js"></script>
+			<script>initLocationsPage();</script>
+		</main>
+
+		<footer class="site-footer">
+			<div class="footer-main">
+				<div class="footer-brand">
+					<a class="wordmark footer-wordmark" href="index.html" aria-label="Makkee Dessert home">
+						<span class="wordmark-main"><span class="brand-cn">麦记</span><span class="brand-latin">MAKKEE</span></span>
+						<span class="wordmark-main"><span class="brand-cn">牛奶</span><span class="brand-latin">DESSERT</span></span>
+					</a>
+					<p>Modern Asian desserts.<br />Just the right amount of sweet.</p>
+				</div>
+				<nav class="footer-column" aria-label="Footer navigation">
+					<h2>Explore</h2>
+					<a href="index.html">Home</a>
+					<a href="about.html">About us</a>
+					<a href="menu.html">Menu</a>
+					<a href="locations.html">Locations</a>
+					<a href="news.html">News</a>
+				</nav>
+				<div class="footer-column">
+					<h2>Find us</h2>
+					<p>Shops in California,<br />New York &amp; Washington</p>
+					<a href="locations.html">Hours, directions &amp; delivery →</a>
+					<a href="https://www.instagram.com/makkeedessert_usa/" target="_blank" rel="noreferrer">@makkeedessert_usa ↗</a>
+				</div>
+			</div>
+			<div class="footer-bottom"><span>© 2026 Makkee Dessert 麦记牛奶</span><a href="#top">Back to top ↑</a></div>
+		</footer>
+	</body>
+</html>
